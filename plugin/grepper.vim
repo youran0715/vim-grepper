@@ -882,7 +882,7 @@ function! s:finish_up(flags)
 
   " Also open if the list contains any invalid entry.
   if a:flags.open || !empty(filter(list, 'v:val.valid == 0'))
-    execute (qf ? 'botright copen' : 'lopen') (size > 10 ? 10 : size)
+    execute (qf ? 'botright copen' : 'lopen')
     let w:quickfix_title = cmdline
     setlocal nowrap
 
